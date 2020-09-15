@@ -1,0 +1,17 @@
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\bin\Debug\Models.dll
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\bin\Debug\System.Security.AccessControl.dll
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\bin\Debug\System.Security.Permissions.dll
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\bin\Debug\Models.pdb
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\bin\Debug\System.Security.Permissions.xml
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Administrator\source\repos\EmployeesMVCADO\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

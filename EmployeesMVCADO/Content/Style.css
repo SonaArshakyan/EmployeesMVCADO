@@ -1,0 +1,64 @@
+﻿.Conatinertable {
+    padding-top: 50px;
+}
+
+.AddButton a {
+    text-decoration: none;
+    color: white;
+}
+
+.AddButton {
+    float: right;
+}
+
+.EmpTable button {
+    border: none;
+    background: none;
+}
+
+.MySearchForm {
+    display: flex;
+    padding-top: 50px;
+}
+
+    .MySearchForm button, input {
+        width: auto;
+    }
+
+    .MySearchForm input {
+        width: auto;
+    }
+
+    .MySearchForm select {
+        width: auto;
+    }
+
+.FormAddEdit {
+    padding: 50px;
+}
+
+
+.error {  
+    color: white;
+    padding: 10px;
+    background-color: red;
+    border-radius: 5%;
+    float: right;
+    position: relative;
+    bottom: 115px;
+}
+
+label.error {
+    display: inline;
+}
+.error:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid red;
+    position: relative;
+    top: 30px;
+    float: left;
+}

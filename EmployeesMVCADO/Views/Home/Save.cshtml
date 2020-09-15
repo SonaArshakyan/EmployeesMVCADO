@@ -1,0 +1,88 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    <div class="row">
+        <div class="container FormAddEdit">
+            <div class="col-md-12">
+                @if (ViewBag.Message != null)
+                {
+                    <h6 style="color:red;">@ViewBag.Message</h6>
+                }
+                <h1></h1>
+                <form action="~/Home/Save" method="post" id="FormEmployee" >
+                    @if (@ViewBag.Emp.EmpId != 0)
+                    {
+                        <input type="hidden" name="EmpId" value="@ViewBag.Emp.EmpId" />
+                    }
+                    else
+                    {
+                        <input type="hidden" name="EmpId" value="" />
+                    }
+
+                    <label for="EmpName" class="form-control">
+                        Employee Name
+                    </label>
+                    @if (@ViewBag.Emp.EmpName != null)
+                    {
+                        <input type="text" name="EmpName" value="@ViewBag.Emp.EmpName" id="EmpName" class="form-control" />
+                    }
+                    else
+                    {
+                        <input type="text" name="EmpName" value="" id="EmpName" class="form-control" />
+                    }
+                    <br />
+
+                    <label for="EmpAge" class="form-control">
+                        Employee Age
+                    </label>
+
+                    @if (@ViewBag.Emp.EmpAge != 0)
+                    {
+                        <input name="EmpAge"type="number" value="@ViewBag.Emp.EmpAge" id="EmpAge" class="form-control" />
+                    }
+
+                    else
+                    {
+                        <input name="EmpAge" type="number" value="" id="EmpAge" class="form-control"  />
+
+                    }
+
+                    <br />
+                    <label for="EmpEmail" class="form-control">
+                        Employee Email
+                    </label>
+                    @if (@ViewBag.Emp.EmpEmail != null)
+                    {
+                        <input type="email" name="EmpEmail" value="@ViewBag.Emp.EmpEmail" id="EmpEmail" class="form-control" />
+                    }
+                    else
+                    {
+                        <input type="email" name="EmpEmail" value="" id="EmpEmail" class="form-control"  />
+                        if (@ViewBag.PostMessage != null)
+                        {
+                            <p style="color:red">@ViewBag.PostMessage</p>
+                        }
+                    }
+
+                    <br />
+                    <label for="EmpSalary" class="form-control">
+                        Employee Salary
+                    </label>
+                    @if (@ViewBag.Emp.EmpSalary != 0)
+                    {
+                        <input name="EmpSalary" type="number" value="@ViewBag.Emp.EmpSalary" id="EmpSalary" class="form-control"  />
+                    }
+                    else
+                    {
+                        <input name="EmpSalary" type="number" value="" id="EmpSalary" class="form-control" />
+                    }                    
+                    <button type="button" class="AddButton btn btn-success" id="submit"> Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+

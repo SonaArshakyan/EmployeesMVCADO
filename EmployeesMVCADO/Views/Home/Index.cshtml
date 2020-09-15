@@ -1,0 +1,122 @@
+﻿
+@model Models.IndexViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section>
+    <div class="container">
+        @if (ViewBag.Message != null)
+        {
+            <h6 style="color:red;">@ViewBag.Message</h6>
+        }
+        <form action="~/Home/Index" method="post">
+            <div class="row">
+                <div class=" col-md-12 ">
+                    <div class="MySearchForm">
+                        <select name="SearchBy" class="form-control">
+                            <option disabled selected>Search By</option>
+                            <option @(ViewBag.SearchModel.SearchBy == "EmpName" ? "selected" : "") value="EmpName">Employee Name</option>
+                            <option @(ViewBag.SearchModel.SearchBy == "EmpAge" ? "selected" : "") value="EmpAge">Employee Age</option>
+                            <option @(ViewBag.SearchModel.SearchBy == "EmpEmail" ? "selected" : "") value="EmpEmail">Employee Email</option>
+                            <option @(ViewBag.SearchModel.SearchBy == "EmpSalary" ? "selected" : "") value="EmpSalary">Employee Salary</option>
+                        </select>
+                        @if (ViewBag.SearchModel.Search != null)
+                        {
+                            <input name="Search" value="@ViewBag.SearchModel.Search" class="form-control" />
+                        }
+                        else
+                        {
+                            <input name="Search" value="" class="form-control" />
+                        }
+                        <input type="hidden" name="sort" value="" id="myvalue" />
+                        <button type="submit" class="form-control"> Search</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="container Conatinertable">
+                    <div class="col-md-12">
+                        <table class="table-hover table-condensed table EmpTable" width="100%">
+                            <tr>
+                                <th class="text-center">
+                                    Employee Id
+                                    <button type="submit" name="SearchOrderBy" value="EmpId">
+                                        <span class="glyphicon glyphicon-triangle-bottom" onclick="SortData('desc')"></span>
+                                    </button>
+                                    <button type="submit" name="SearchOrderBy" value="EmpId">
+                                        <span class="glyphicon glyphicon-triangle-top" onclick="SortData('asc')"></span>
+                                    </button>
+                                </th>
+                                <th class="text-center">
+                                    Employee Name
+                                    <button type="submit" name="SearchOrderBy" value="EmpName">
+                                        <span class="glyphicon glyphicon-triangle-bottom" onclick="SortData('desc')"></span>
+                                    </button>
+                                    <button type="submit" name="SearchOrderBy" value="EmpName">
+                                        <span class="glyphicon glyphicon-triangle-top" onclick="SortData('asc')"></span>
+                                    </button>
+                                </th>
+                                <th class="text-center">
+                                    Employee Age
+                                    <button type="submit" name="SearchOrderBy" value="EmpAge">
+                                        <span class="glyphicon glyphicon-triangle-bottom" onclick="SortData('desc')"></span>
+                                    </button>
+                                    <button type="submit" name="SearchOrderBy" value="EmpAge">
+                                        <span class="glyphicon glyphicon-triangle-top" onclick="SortData('asc')"></span>
+                                    </button>
+                                </th>
+                                <th class="text-center">
+                                    Employee Email
+                                    <button type="submit" name="SearchOrderBy" value="EmpEmail">
+                                        <span class="glyphicon glyphicon-triangle-bottom" onclick="SortData('desc')"></span>
+                                    </button>
+                                    <button type="submit" name="SearchOrderBy" value="EmpEmail">
+                                        <span class="glyphicon glyphicon-triangle-top" onclick="SortData('asc')"></span>
+                                    </button>
+                                </th>
+                                <th class="text-center">
+                                    Employee Salary
+                                    <button type="submit" name="SearchOrderBy" value="EmpSalary">
+                                        <span class="glyphicon glyphicon-triangle-bottom" onclick="SortData('desc')"></span>
+                                    </button>
+                                    <button type="submit" name="SearchOrderBy" value="EmpSalary">
+                                        <span class="glyphicon glyphicon-triangle-top" onclick="SortData('asc')"></span>
+                                    </button>
+                                </th>
+                                <th class="text-center"> ... </th>
+                                <th class="text-center"> ... </th>
+                            </tr>
+                     
+                                @foreach (var emp in Model.Employees)
+                                {
+                                    <tr data-rowid="@emp.EmpId">
+                                        <td class="text-center"> <a href="Home/Details/@emp.EmpId"> @emp.EmpId   </a></td>
+                                        <td class="text-center"> @emp.EmpName</td>
+                                        <td class="text-center"> @emp.EmpAge</td>
+                                        <td class="text-center"> @emp.EmpEmail</td>
+                                        <td class="text-center"> @emp.EmpSalary</td>
+                                        <td class="text-center"> <a href="Home/Save/@emp.EmpId">Edit</a> </td>
+                                        <td class="text-center"> <a href="#!" onclick="MyFunction(@emp.EmpId)">Delete</a> </td>
+                                    </tr>
+                                }
+                        
+
+                        </table>
+                        <div class="btn-group">
+                            @Html.PageLinks(Model.PageInfo, x => Url.Action("Index", new { Page = x , Search = ViewBag.SearchModel.Search, SearchBy = ViewBag.SearchModel.SearchBy}))
+                        </div>
+                        <a class="btn btn-success AddButton" href="~/Home/Save"> Add Employee </a>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+
+
